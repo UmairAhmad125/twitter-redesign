@@ -1,0 +1,19 @@
+body,
+html {
+    height: 100%;
+}
+
+.main-cont {
+    background-color: #51A4E2;
+    height: 100%;
+}
+
+.container #login-row #login-column #login-box {
+    height: max-content;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+}
+
+.container #login-row #login-column #login-box #login-form {
+    padding: 15px;
+}
