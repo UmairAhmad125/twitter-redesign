@@ -17,3 +17,67 @@ html {
 .container #login-row #login-column #login-box #login-form {
     padding: 15px;
 }
+
+.main {
+    margin-left: 23% !important;
+    margin-top: 75px;
+    .top-nav {
+        background-color: #50A1E0;
+        width: 78%;
+        left: 22%;
+        height: 70px;
+        top: 0;
+        position: fixed;
+        .top-nav-left a {
+            color: #667D92;
+        }
+        color: #667D92;
+        .logo,
+        {
+            color: whitesmoke;
+        }
+        .top-nav-left {
+            padding-right: 5px;
+        }
+    }
+}
+
+.menu-items {
+    list-style-type: none;
+    li:hover {
+        background-color: #4C9BD5;
+        color: whitesmoke;
+    }
+    li:hover a {
+        color: whitesmoke;
+    }
+}
+
+.left-nav {
+    background-color: #213246;
+    color: #667D92;
+    position: fixed;
+    left: 0;
+    width: 22%;
+    height: 100%;
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+    a {
+        color: #667D92;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    .following,
+    .followers {
+        h5 {
+            margin-top: -7px;
+            color: #84919E;
+        }
+    }
+    menu li {
+        margin-top: 10px;
+    }
+}
