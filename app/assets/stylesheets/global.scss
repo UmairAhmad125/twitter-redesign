@@ -1,6 +1,7 @@
 body,
 html {
     height: 100%;
+    background-color: #e3e7f0;
 }
 
 .main-cont {
@@ -79,5 +80,21 @@ html {
     }
     menu li {
         margin-top: 10px;
+    }
+}
+
+
+/* Who to follow */
+
+.who-to-follow {
+    width: 350px;
+    .people {
+        max-width: 540px;
+        background-color: #F5EFEF;
+        //border: .5px solid rgb(201, 194, 194);
+        img {
+            width: 70px;
+            border-radius: 50%;
+        }
     }
 }

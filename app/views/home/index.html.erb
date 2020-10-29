@@ -7,8 +7,17 @@
         <div>
             <%= render 'shared/top-nav'%>
         </div>
-        <div class="main-content ">
-            <p>Hey there</p>
+        <div class="d-flex flex-column">
+            <% if check_photo %>
+            <div class=d-flex flex-column>
+                <p class="text-primary ">Complete your profile</p>
+                <%= link_to 'click here', edit_user_registration_path, class: "text-danger ml-1" %>
+            </div>
+            <% end %>
+            <div class="main-content d-flex flex-row">
+                <%= render 'shared/opinion'%>
+                <%= render 'shared/who-to'%>
+            </div>
         </div>
     </main>
 </div>
