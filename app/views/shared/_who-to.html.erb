@@ -1,13 +1,19 @@
 <div class="who-to-follow d-flex flex-column mt-3">
-    <h5 class="text-center">Who to follow</h5>
+    
     <div class="people py-1">
         <div class="d-flex flex-row justify-content-around">
             <div>
-                <img src="https://www.gstatic.com/tv/thumb/persons/894022/894022_v9_bb.jpg"  alt="...">
+                <% if check_dp(suggested_user) %>
+                    <%= image_tag url_for(suggested_user.Photo) %>                     
+                <% else %>
+                    <img src="https://www.gstatic.com/tv/thumb/persons/894022/894022_v9_bb.jpg"  alt="...">
+                <% end %>
             </div>
             <div >
             <div class="d-flex flex-column mt-2">
-                <h5 class="card-title">Federer</h5>
+                <h5 class="card-title">
+                    <%= suggested_user.user_name %>
+                </h5>
                 <%= link_to 'Follow +' %>
             </div>
             </div>

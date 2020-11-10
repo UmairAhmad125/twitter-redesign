@@ -9,6 +9,10 @@ html {
     height: 100%;
 }
 
+.main-content {
+    width: 100%;
+}
+
 .container #login-row #login-column #login-box {
     height: max-content;
     border: 1px solid #9C9C9C;
@@ -61,7 +65,7 @@ html {
     left: 0;
     width: 22%;
     height: 100%;
-    .profile-pic {
+    img {
         width: 60px;
         height: 60px;
     }
@@ -86,8 +90,16 @@ html {
 
 /* Who to follow */
 
+.feed-container {}
+
+.fixed-right {
+    right: 0;
+    position: fixed;
+    margin-right: 30px;
+}
+
 .who-to-follow {
-    width: 350px;
+    width: 320px;
     .people {
         max-width: 540px;
         background-color: #F5EFEF;
@@ -97,4 +109,30 @@ html {
             border-radius: 50%;
         }
     }
+}
+
+
+/*  Edit user */
+
+.edit-user {
+    input {
+        max-width: 300px;
+    }
+}
+
+.basic-info,
+.pictures {
+    background-color: #EAEAEA;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.4;
+}
+
+.feed-container {
+    background-color: #F5EFEF;
 }
