@@ -1,21 +1,23 @@
 class HomeController < ApplicationController
   before_action :logged_in_user
   def index
-      followers = current_user.followers.ids
+      followers = current_user.followed.ids
       followers.push(current_user.id)
-      suggested = User.where.not(id: followers)
+      suggested = User.where.not(id: followers).desc
       @who_to = Array.new
       if suggested.ids.count >= 4
          @who_to = selected(suggested.to_a)
       else
          @who_to = suggested
       end
-      @opinion = Opinion.all
+      @opinion = Opinion.all.desc
   end
-  def new
+
+  def follow
+      Following.create(follower_id: current_user.id, followed_id: params[:id])
+      redirect_to root_path
   end
-  def create
-  end
+
   private
    def logged_in_user
       unless signed_in?

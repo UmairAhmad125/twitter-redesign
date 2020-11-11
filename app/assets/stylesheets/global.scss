@@ -96,6 +96,10 @@ html {
     right: 0;
     position: fixed;
     margin-right: 30px;
+    img {
+        width: 80px;
+        border-radius: 50%;
+    }
 }
 
 .who-to-follow {
@@ -135,4 +139,37 @@ html {
 
 .feed-container {
     background-color: #F5EFEF;
+}
+
+.cover {
+    width: 68%;
+    height: 300px;
+}
+
+.font-12 {
+    font-size: 16px;
+}
+
+.rounded-circlee {
+    border: .5px solid gray;
+    border-radius: 50%;
+    font-size: 32px;
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.background-white {
+    background-color: white !important;
+}
+
+.background-off {
+    background-color: #F5EFEF;
+}
+
+.all-users {
+    img {
+        width: 80px;
+        height: 80px;
+    }
 }

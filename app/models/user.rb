@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  scope :desc, -> { order(created_at: :desc) } 
   has_one_attached :Photo
   has_one_attached :CoverImage
   has_many :opinions, foreign_key: :author_id

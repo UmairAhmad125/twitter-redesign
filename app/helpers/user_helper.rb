@@ -1,5 +1,5 @@
 module UserHelper
-    def check_photo
-        return (current_user.Photo.attached? && current_user.CoverImage.attached?) 
+    def check_photo(user)
+        return (user.Photo.attached? && user.CoverImage.attached?) 
     end
 end
