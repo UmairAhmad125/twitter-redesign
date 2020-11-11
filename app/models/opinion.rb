@@ -1,6 +1,6 @@
 class Opinion < ApplicationRecord
   belongs_to :user, foreign_key: :author_id
-  validates :text, presence: true, length: { minimum: 5, maximum: 1000 }
+  scope :desc, -> { order(created_at: :desc) }
 
-  scope :desc, -> { order(created_at: :desc) } 
+  validates :text, presence: true, length: { minimum: 5, maximum: 1000 }
 end
