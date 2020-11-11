@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'users/all'
   resources :opinion
   post 'home/follow'
+  post 'home/unfollow'
   root to: 'home#index'
 end

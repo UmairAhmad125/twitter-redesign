@@ -1,5 +1,5 @@
 
-<div class="d-flex flex-row">
+<div class="d-flex flex-row no-hover">
     <div class="">
         <%= render 'shared/left-nav'%>
     </div>
@@ -8,12 +8,6 @@
             <%= render 'shared/top-nav'%>
         </div>
         <div class="d-flex flex-column">
-            <% if !check_photo(current_user) %>
-                <div class=d-flex flex-column>
-                    <p class="text-primary ">Complete your profile</p>
-                    <%= link_to 'click here', edit_user_registration_path, class: "text-danger ml-1" %>
-                </div>
-            <% end %>
             <div class="main-content d-flex flex-row background-white">
                 <div class="d-flex flex-column ">
                     <% if check_photo(@user) %>
@@ -43,11 +37,11 @@
                     <h5 class="mt-2">
                         <%= link_to check_user_name(@user) ,  users_show_path('id' => current_user.id)%>
                     </h5>
-                    <% if @user != current_user %>
+                    <%# <% if @user != current_user %> 
                         <div class="d-flex rounded-circlee  align-items-center justify-content-center px-3 "> 
-                            <%= link_to '+', home_follow_path('id' => @user.id), method: :post, class: "font-wight-bold" %>                       
+                            <%= check_follower(@user) %>                       
                         </div>
-                    <% end %>
+                    <%# <% end %> 
                     <div class="d-flex flex-row mt-2">
                         <div class="d-flex flex-column align-items-center  following p-1">
                             <p>
@@ -67,14 +61,18 @@
                             </p>
                             <h5 class="font-12">Twitchs</h5>`
                         </div>
-                        <div class="d-flex flex-column">
+                    </div>
+                    <h5>Followed by</h5>
+                    <div class="d-flex flex-column mt-2">
                             <% if @user.followers.count > 0 %>
-                                <% @user.followers.each do |u| %>
-                                    <p><%= u.followers.full_name %></p>
+                                <% f = @user.followers %>
+                                <% f.each do |uf| %>
+                                    <%= link_to check_user_name(uf) ,  users_show_path('id' => uf.id)%>
                                 <% end %>
+                            <% else %>
+                                <p>No Followers</p>
                             <% end %>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

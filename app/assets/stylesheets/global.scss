@@ -1,7 +1,7 @@
 body,
 html {
     height: 100%;
-    background-color: #e3e7f0;
+    background-color: white;
 }
 
 .main-cont {
@@ -90,8 +90,6 @@ html {
 
 /* Who to follow */
 
-.feed-container {}
-
 .fixed-right {
     right: 0;
     position: fixed;
@@ -171,5 +169,11 @@ html {
     img {
         width: 80px;
         height: 80px;
+    }
+}
+
+.no-hover {
+    a:hover {
+        text-decoration: none;
     }
 }

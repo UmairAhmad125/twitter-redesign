@@ -15,7 +15,13 @@ class HomeController < ApplicationController
 
   def follow
       Following.create(follower_id: current_user.id, followed_id: params[:id])
-      redirect_to root_path
+      redirect_to users_show_path('id' => params[:id])
+  end
+
+  def unfollow
+      f = Following.where(followed_id: params[:id], follower_id: current_user.id)
+      Following.delete(f)
+      redirect_to users_show_path('id' => params[:id])
   end
 
   private
