@@ -2,18 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .opinion::placeholder {
-    color: blue;
+  color: blue;
 }
 
 .opinions {
-    width: 100%;
-    background-color: rgb(245, 239, 239);
-    padding: 25px;
-    margin: 20px;
-    margin-top: 30px;
-    min-width: 550px;
-    .op-text-area {
-        min-width: 400px;
-        width: 75%;
-    }
+  width: 100%;
+  background-color: rgb(245, 239, 239);
+  padding: 25px;
+  margin: 20px;
+  margin-top: 30px;
+  min-width: 550px;
+
+  .op-text-area {
+    min-width: 400px;
+    width: 75%;
+  }
 }
