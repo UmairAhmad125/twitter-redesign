@@ -19,7 +19,7 @@
 - Ruby on Rails v6.0.3.4
 
 ## Live vesion
-[click here]()
+[click here](https://ltwitcher.herokuapp.com/users/sign_in)
 
 ## Screenshot
 ![screenshot1](app/assets/images/screenshot.png)
