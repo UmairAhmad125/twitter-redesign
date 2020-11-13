@@ -8,7 +8,9 @@ class OpinionController < ApplicationController
     if @opinion.save
       redirect_to root_path
     else
+      flash.now[:alert] = 'minimum 5 and max 500 words are allowed'
       render 'new'
+      flash[:alert] = 'minimum 5 and max 500 words are allowed'
     end
   end
 

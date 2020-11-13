@@ -14,17 +14,21 @@ class HomeController < ApplicationController
   end
 
   def follow
-    Following.create(follower_id: current_user.id, followed_id: params[:id])
-    redirect_to users_show_path('id' => params[:id])
+    Following.create(follower_id: current_user.id, followed_id: allowed_params)
+    redirect_to users_show_path('id' => allowed_params)
   end
 
   def unfollow
-    f = Following.where(followed_id: params[:id], follower_id: current_user.id)
+    f = Following.where(followed_id: allowed_params, follower_id: current_user.id)
     Following.delete(f)
-    redirect_to users_show_path('id' => params[:id])
+    redirect_to users_show_path('id' => allowed_params)
   end
 
   private
+
+  def allowed_params
+    params.require(:id)
+  end
 
   def logged_in_user
     redirect_to user_session_path unless signed_in?

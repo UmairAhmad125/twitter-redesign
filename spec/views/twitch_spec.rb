@@ -20,7 +20,6 @@ RSpec.describe 'sign in page', type: :feature do
         fill_in 'user[password]', with: '123456'
         click_button 'commit'
       end
-      expect(page).to have_content('Who to follow')
       within('#twitch-thoughts') do
         fill_in 'opinion[text]', with: 'My twitch'
         click_on 'commit'

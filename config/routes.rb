@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'users/show'
   get 'users/all'
-  resources :opinion
+  resources :opinion, only: [:index, :show, :create]
   post 'home/follow'
   post 'home/unfollow'
   root to: 'home#index'
