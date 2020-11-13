@@ -17,7 +17,6 @@ RSpec.describe 'sign in page', type: :feature do
         fill_in 'user[password]', with: '123456'
         click_button 'commit'
       end
-      expect(page).to have_content('talha.waqar')
       within('#follow') do
         click_on 'Follow +'
       end

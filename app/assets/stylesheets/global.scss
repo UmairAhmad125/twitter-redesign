@@ -4,6 +4,10 @@ html {
   background-color: white;
 }
 
+p {
+  word-break: break-all;
+}
+
 .main-cont {
   background-color: #51a4e2;
   height: 100%;
@@ -167,6 +171,7 @@ html {
 
 .feed-container {
   background-color: #f5efef;
+  width: 60%;
 }
 
 .cover {
