@@ -1,0 +1,20 @@
+// Place all the styles related to the opinion controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.opinion::placeholder {
+  color: blue;
+}
+
+.opinions {
+  width: 60%;
+  background-color: rgb(245, 239, 239);
+  padding: 25px;
+  margin: 20px;
+  margin-top: 30px;
+  min-width: 550px;
+
+  .op-text-area {
+    min-width: 400px;
+    width: 75%;
+  }
+}

@@ -1,0 +1,19 @@
+<nav class="top-nav d-flex flex-row justify-content-between align-items-center">
+    <div class="logo ml-4">
+        <i class="fab fa-twitter fa-2x"></i>
+    </div>
+    <div class="top-nav-left d-flex flex-row align-items-center mr-2">
+        <%= link_to '#' do %>
+            <i class="mr-4 fa fa-pen fa-2x"></i>
+        <% end %>
+        <%= link_to '#' do %>
+            <i class="mr-4 fa fa-envelope fa-2x"></i>
+        <% end %>
+        <%= link_to '#' do %>
+        <i class="mr-4 fa fa-search fa-2x"></i>
+        <% end %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out-alt fa-2x" aria-hidden="true"></i>
+        <% end %> 
+    </div>
+</nav>

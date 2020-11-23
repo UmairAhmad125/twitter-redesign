@@ -1,0 +1,46 @@
+
+
+<div id="login", class="main-cont">
+        <h3 class="text-center text-white pt-5">Welcome to Twitcher</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <% flash.each do |type, msg| %>
+                          <div class="text-danger">
+                            <%= msg %>
+                          </div>
+                        <% end %>
+                      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:id => "login-form"}) do |f| %>
+                        <div class="field form-group">
+                          <%= f.label :email , class: "text-info" %><br />
+                          <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email" %>
+                        </div>
+
+                        <div class="field form-group">
+                          <%= f.label :password , class: "text-info" %><br />
+                          <%= f.password_field :password, class: "form-control", autocomplete: "current-password" %>
+                        </div>
+
+                        <% if devise_mapping.rememberable? %>
+                          <div class="field form-group">
+                            <%= f.check_box :remember_me, class: ""%>
+                            <%= f.label :remember_me , class: "text-info" %>
+                          </div>
+                        <% end %>
+
+                        <div class="actions d-flex flex-row justify-content-around">
+                          <%= f.submit "Log in" , class: "btn btn-info btn-md"%>
+                          <div id="register-link" class="text-right">
+                            <%= render "devise/shared/links" %>
+                          </div>
+                        </div>
+                      <% end %>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

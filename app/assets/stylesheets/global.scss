@@ -1,0 +1,192 @@
+body,
+html {
+  height: 100%;
+  background-color: white;
+}
+
+p {
+  word-break: break-all;
+}
+
+.main-cont {
+  background-color: #51a4e2;
+  height: 100%;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.container #login-row #login-column #login-box {
+  height: max-content;
+  border: 1px solid #9c9c9c;
+  background-color: #eaeaea;
+}
+
+.container #login-row #login-column #login-box #login-form {
+  padding: 15px;
+}
+
+.left-nav {
+  background-color: #213246;
+  color: #667d92;
+  position: fixed;
+  left: 0;
+  width: 22%;
+  height: 100%;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  a {
+    color: #667d92;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .following,
+  .followers {
+    h5 {
+      margin-top: -7px;
+      color: #84919e;
+    }
+  }
+
+  menu li {
+    margin-top: 10px;
+  }
+}
+
+.rounded-circlee {
+  border: 0.5px solid gray;
+  border-radius: 50%;
+  font-size: 32px;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.no-hover {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.menu-items {
+  list-style-type: none;
+
+  li:hover {
+    background-color: #4c9bd5;
+    color: whitesmoke;
+  }
+
+  li:hover a {
+    color: whitesmoke;
+  }
+}
+
+.main {
+  margin-left: 23% !important;
+  margin-top: 75px;
+
+  .top-nav {
+    background-color: #50a1e0;
+    width: 78%;
+    left: 22%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+
+    .top-nav-left a {
+      color: #667d92;
+    }
+
+    color: #667d92;
+
+    .logo {
+      color: whitesmoke;
+    }
+
+    .top-nav-left {
+      padding-right: 5px;
+    }
+  }
+}
+
+.fixed-right {
+  right: 0;
+  position: fixed;
+  margin-right: 30px;
+
+  img {
+    width: 80px;
+    border-radius: 50%;
+  }
+}
+
+.all-users {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.who-to-follow {
+  width: 320px;
+
+  .people {
+    max-width: 540px;
+    background-color: #f5efef;
+    //border: .5px solid rgb(201, 194, 194);
+    img {
+      width: 70px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.edit-user {
+  input {
+    max-width: 300px;
+  }
+}
+
+.basic-info,
+.pictures {
+  background-color: #eaeaea;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.4;
+}
+
+.feed-container {
+  background-color: #f5efef;
+  width: 60%;
+}
+
+.cover {
+  width: 68%;
+  height: 300px;
+}
+
+.font-12 {
+  font-size: 16px;
+}
+
+.background-white {
+  background-color: white !important;
+}
+
+.background-off {
+  background-color: #f5efef;
+}

@@ -1,0 +1,12 @@
+<div class="opinions" id="twitch-thoughts">
+    <%= form_with model: @opinion, url: opinion_index_path, method: :post do |f| %>
+        <div class="field form-group" >
+            <label class="text-info">twitch something</label>
+            <br />
+            <%= f.text_area :text, autofocus: true, class: "form-control op-text-area", placeholder: 'twitch your thoughts' %> 
+        </div>
+        <div class="actions d-flex flex-row justify-content-around">
+            <%= f.submit "twitch" , class: "btn btn-info btn-md"%>
+        </div>
+    <% end %>
+</div>

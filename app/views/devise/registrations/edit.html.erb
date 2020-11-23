@@ -1,0 +1,76 @@
+<div id="login", class="main-cont d-flex justify-content-center">
+<div class="edit-user">
+  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <% flash.each do |type, msg| %>
+                              <div class="text-danger">
+                                <%= msg %>
+                              </div>
+                            <% end %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  
+    <div class="basic-info">
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group d-flex flex-row p-2">
+      <div>
+        <%= f.label :email, class: "" %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control",autocomplete: "email" %>
+      </div>
+      <div class="ml-2">
+        <%= f.label :user_name, class: "" %><br />
+        <%= f.text_field :user_name, autofocus: true, class: "form-control", autocomplete: "username" %>
+      </div>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="field d-flex flex-row p-2">
+      <div>
+        <%= f.label :password %> 
+        <br />
+        <%= f.password_field :password, class: "form-control", autocomplete: "new-password" %>
+        <i class="text-danger">(leave blank if you don't want to change it)</i>
+      </div>
+      <div class="ml-2">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password" %>
+      </div>
+    </div>
+
+    <div class="field">
+      
+    </div>
+
+    <div class="field p-2">
+      <%= f.label :current_password %> <i class="text-danger">(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password, class: "form-control", autocomplete: "current-password" %>
+    </div>
+    </div>
+
+    <div class="pictures mt-4">
+      <div class="p-2">
+        <%= f.label :Select_Profile_Picture %>
+        <%= f.file_field :Photo %>
+      </div>
+      <div class="p-2">
+        <%= f.label :Select_Cover_Image %>
+        <%= f.file_field :CoverImage, class: "ml-2" %>
+      </div>
+    </div>
+
+    <div class="actions mt-2">
+      <%= f.submit "Update", class: "btn btn-success"  %>
+    </div>
+    
+  <% end %>
+
+  <h3>Cancel my account</h3>
+  <p>Unhappy? </p>
+  <div class="d-flex flex-row">
+  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Go Back", :back, class: "btn btn-success ml-2" %>
+  </div>
+  </div>
+</div>

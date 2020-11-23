@@ -1,0 +1,36 @@
+
+<div class="d-flex flex-row no-hover">
+    <div class="">
+        <%= render 'shared/left-nav'%>
+    </div>
+    <main class="d-flex flex-column main">
+        <div>
+            <%= render 'shared/top-nav'%>
+        </div>
+        <div class="d-flex flex-column">
+            <% if !check_photo(current_user) %>
+            <div class=d-flex flex-column>
+                <p class="text-primary ">Complete your profile</p>
+                <%= link_to 'click here', edit_user_registration_path, class: "text-danger ml-1" %>
+            </div>
+            <% end %>
+            <div class="main-content d-flex flex-row ">
+                <div class="d-flex flex-column ">
+                    <%= render 'shared/opinion'%>
+                    <div class="feed-container p-2 ml-4">
+                        <% @opinion.each do |o| %>
+                            <h5 class="font-weight-bold"><%= get_name(o.author_id) %></h5>
+                            <p><%= o.text %></p>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="d-flex flex-column fixed-right">
+                    <h5 class="text-center">Who to follow</h5>
+                    <% @who_to.each do |f| %>
+                        <%= render partial: 'shared/who-to', locals: {suggested_user: f}  %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
